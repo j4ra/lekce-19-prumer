@@ -11,7 +11,7 @@ int main() {
 	int pocet = 0;
 	double cislo;
 	
-	printf("Zadavejte csla, ukoncete nulou: ");
+	printf("Zadavejte cisla, ukoncete nulou:\n");
 	
 	scanf("%lf", &cislo);
 	
