@@ -7,6 +7,14 @@ int je_nula(double x) {
 	return (x < EPSILON) && (x > -EPSILON);
 }
 
+double smerodatna_odchylka(double prumer, double* cisla, int pocet){
+	double suma_mocnin = 0.;
+	for(int i = 0; i < pocet; i++){
+		suma_mocnin += fabs(prumer - cisla[i]) * fabs(prumer - cisla[i]);
+	}
+	return sqrt(suma_mocnin / pocet);
+}
+
 int main() {
 	double suma = 0.;
 	int pocet = 0;
@@ -42,6 +50,7 @@ int main() {
 	}
 	
 	printf("Prumer je %lf\n", suma / pocet);
+	printf("Smerodatna odchylka je %lf\n", smerodatna_odchylka(suma / pocet, cisla, pocet));
 	
 	return 0;
 }
