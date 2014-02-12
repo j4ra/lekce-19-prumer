@@ -13,13 +13,22 @@ int main() {
 	
 	printf("Zadavejte cisla, ukoncete nulou:\n");
 	
-	scanf("%lf", &cislo);
+	int ok = scanf("%lf", &cislo);
+	if(ok != 1)
+	{
+		printf("Nezadal jsi cisla!");
+		return 0;
+	}
 	
 	while (!je_nula(cislo)) {
 		suma = suma + cislo;
 		pocet++;
 		
-		scanf("%lf", &cislo);
+		ok = scanf("%lf", &cislo);
+		if(ok != 1)
+		{
+			break;
+		}
 	}
 	
 	printf("Prumer je %lf\n", suma / pocet);
