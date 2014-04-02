@@ -1,1 +1,1 @@
-Zadání je [tady](http://alej.alisma.cz/prog/pg19).
+Zadání je [tady](http://alej.alisma.cz/prog/pg20/github.html).
